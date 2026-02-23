@@ -14,23 +14,23 @@ def index():
         cities = [city.strip() for city in request.form["city"].split(",")]
         for city in cities:
             params = {
-            "q": city,
-            "appid": API_KEY,
-            "units": "imperial"  # or "metric"
+                "q": city,
+                "appid": API_KEY,
+                "units": "imperial"  # or "metric"
             }
 
-        response = requests.get(BASE_URL, params=params)
-        if response.status_code == 200:
-            data = response.json()
-            weather_data = {
-                "city": data["name"],
-                "temperature": data["main"]["temp"],
-                "description": data["weather"][0]["description"].title(),
-                "humidity": data["main"]["humidity"],
-                "icon": data["weather"][0]["icon"]
-            }
-        else:
-            weather_data = {"error": "City not found. Please try again."}
+            response = requests.get(BASE_URL, params=params)
+            if response.status_code == 200:
+                data = response.json()
+                weather_data.append({
+                    "city": data["name"],
+                    "temperature": data["main"]["temp"],
+                    "description": data["weather"][0]["description"].title(),
+                    "humidity": data["main"]["humidity"],
+                    "icon": data["weather"][0]["icon"]
+                })
+            else:
+                weather_data.append({"error": f"City '{city}' not found. Please try again."})
 
     return render_template("index.html", weather=weather_data)
 

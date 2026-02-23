@@ -52,18 +52,18 @@
         <button type="submit">Get Weather</button>
     </form>
 
-    {% if weather %}
+    {% for w in weather %}
         <div class="card-container">
-            {% if weather.error %}
-                <p>{{ weather.error }}</p>
+            {% if w.error %}
+                <p>{{ w.error }}</p>
             {% else %}
-                <h2>{{ weather.city }}</h2>
-                <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="Weather icon">
-                <p><strong>{{ weather.description }}</strong></p>
-                <p>🌡️ Temperature: {{ weather.temperature }}°F</p>
-                <p>💧 Humidity: {{ weather.humidity }}%</p>
+                <h2>{{ w.city }}</h2>
+                <img src="https://openweathermap.org/img/wn/{{ w.icon }}@2x.png" alt="Weather icon">
+                <p><strong>{{ w.description }}</strong></p>
+                <p>🌡️ Temperature: {{ w.temperature }}°F</p>
+                <p>💧 Humidity: {{ w.humidity }}%</p>
             {% endif %}
         </div>
-    {% endif %}
+    {% endfor %}
 </body>
 </html>
