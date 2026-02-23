@@ -34,7 +34,7 @@ A lightweight weather app built with Flask that displays current conditions for 
 
 2. Install dependencies:
    ```bash
-   pip install flask requests
+   pip install -r requirements.txt
    ```
 
 3. Update the `API_KEY` variable in `app.py` with your own OpenWeatherMap key.
@@ -49,8 +49,9 @@ A lightweight weather app built with Flask that displays current conditions for 
 ## Project Structure
 
 ```
-├── app.py         # Flask server and API logic
-├── index.html     # Jinja2 template (UI)
+├── app.py             # Flask server and API logic
+├── index.html         # Jinja2 template (UI)
+├── requirements.txt   # Python dependencies
 └── README.md
 ```
 
