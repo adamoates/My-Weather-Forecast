@@ -1,11 +1,12 @@
 # My Weather Forecast
 
+*Forked from [MStafford21/My-Weather-Forecast](https://github.com/MStafford21/My-Weather-Forecast)*
 
 A lightweight weather app built with Flask that displays current conditions for any city using the OpenWeatherMap API.
 
 ## Features
 
-- Look up current weather by city name
+- Look up current weather by city name, with support for multiple comma-separated cities
 - Displays temperature (°F), humidity, weather description, and icon
 - Clean gradient UI with a simple search form
 
@@ -33,7 +34,7 @@ A lightweight weather app built with Flask that displays current conditions for 
 
 2. Install dependencies:
    ```bash
-   pip install flask requests
+   pip install -r requirements.txt
    ```
 
 3. Update the `API_KEY` variable in `app.py` with your own OpenWeatherMap key.
@@ -48,11 +49,13 @@ A lightweight weather app built with Flask that displays current conditions for 
 ## Project Structure
 
 ```
-├── app.py         # Flask server and API logic
-├── index.html     # Jinja2 template (UI)
+├── app.py             # Flask server and API logic
+├── templates/
+│   └── index.html     # Jinja2 template (UI)
+├── requirements.txt   # Python dependencies
 └── README.md
 ```
 
 ## Usage
 
-Enter a city name in the search field and click **Get Weather**. The app will display the current temperature, humidity, weather description, and an icon representing conditions.
+Enter a city name in the search field and click **Get Weather**. The app will display the current temperature, humidity, weather description, and an icon representing conditions. You can also enter multiple cities separated by commas (e.g. `New York, London, Tokyo`) to view weather for all of them at once.
