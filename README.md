@@ -50,7 +50,8 @@ A lightweight weather app built with Flask that displays current conditions for 
 
 ```
 ├── app.py             # Flask server and API logic
-├── index.html         # Jinja2 template (UI)
+├── templates/
+│   └── index.html     # Jinja2 template (UI)
 ├── requirements.txt   # Python dependencies
 └── README.md
 ```
