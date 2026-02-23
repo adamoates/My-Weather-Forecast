@@ -5,7 +5,7 @@ A lightweight weather app built with Flask that displays current conditions for 
 
 ## Features
 
-- Look up current weather by city name
+- Look up current weather by city name, with support for multiple comma-separated cities
 - Displays temperature (°F), humidity, weather description, and icon
 - Clean gradient UI with a simple search form
 
@@ -55,4 +55,4 @@ A lightweight weather app built with Flask that displays current conditions for 
 
 ## Usage
 
-Enter a city name in the search field and click **Get Weather**. The app will display the current temperature, humidity, weather description, and an icon representing conditions.
+Enter a city name in the search field and click **Get Weather**. The app will display the current temperature, humidity, weather description, and an icon representing conditions. You can also enter multiple cities separated by commas (e.g. `New York, London, Tokyo`) to view weather for all of them at once.
