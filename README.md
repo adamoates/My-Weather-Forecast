@@ -1,6 +1,5 @@
 # My Weather Forecast
 
-*Forked from [MStafford21/My-Weather-Forecast](https://github.com/MStafford21/My-Weather-Forecast)*
 
 A lightweight weather app built with Flask that displays current conditions for any city using the OpenWeatherMap API.
 
